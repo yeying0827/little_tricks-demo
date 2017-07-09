@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#parent {
+    width: 600px;
+    margin: 100px auto 0;
+    border: 1px solid;
+}
+
+#top {
+    height: 100px;
+    background-color: #c0c;
+}
+
+#left {
+    float: left;
+    width: 100px;
+    background-color: #0c0;
+}
+
+#content {
+    float: left;
+    width: 400px;
+    background-color: #ccc;
+}
+
+#right {
+    float: right;
+    width: 100px;
+    background-color: #00c;
+}
+
+#foot {
+    height: 100px;
+    background-color: #cc0;
+    clear: both;
+}
+
+#left, #content, #right {
+    padding-bottom: 2000px;
+    margin-bottom: -2000px;
+}
+
+#main {
+    overflow: hidden;
+}

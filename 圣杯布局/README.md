@@ -90,10 +90,13 @@
 </div>
 ```
 
+![1.png](screenshots/1.png)
+
 > 加工
 
 1.将中间left、content和right向左浮动，并设置left和right的宽度分别设置为100px和150px，将三者的父元素（main）的左右内边距设置为100px和150px，与left和right的宽度相同。
 然后我们将foot清除浮动。
+![2.png](screenshots/2.png)
 
 2.content宽度设置了100%，故而其宽度不够，所以content和right就掉下来了，对于这个我们可以为content和right设置一个margin-left属性来解决这个问题。
 ```css
@@ -110,6 +113,7 @@
 }
 ```
 但是left被content挡住了。
+![3.png](screenshots/3.png)
 
 3.我们用相对定位把left向左移，right向右移。并把top和foot设置高度为50px;
 ```css
@@ -128,8 +132,23 @@
     background-color: #77bbdd;
 }
 ```
+![4.png](screenshots/4.png)
 
-4.看起来差不多了，不过我们还需要处理一个问题，就是中间三列的等高问题(再开一个页面写)
+4.看起来差不多了，不过我们还需要处理一个问题，就是中间三列的等高问题
+
+```css
+#main {
+    padding-left: 100px;
+    padding-right: 150px;
+    overflow: hidden;
+}
+
+#left, #content, #right {
+    padding-bottom: 2000px;
+    margin-bottom: -2000px;
+}
+```
+![5.png](screenshots/5.png)
 
 5.完成
 
@@ -138,6 +157,7 @@
 在这个布局中，主要内容content的宽度是自适应的，而left和right的宽度是固定的，当我们增加parents的宽度时，content的宽度随之增加，left和right保持不变。
 
 这就是圣杯布局，也有叫做双飞翼布局的。
+![6.png](screenshots/6.png)
 
 而且我们通过相对定位，可以通过计算，随意定制left、content和right三者的前后顺序。
 
