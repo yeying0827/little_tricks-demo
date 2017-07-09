@@ -1,5 +1,8 @@
 ## 多列等高布局
 
+> 参考原文
+[【CSS】 布局之多列等高](http://www.cnblogs.com/linxiong945/p/4039197.html)
+
 #### 第一步：写一个坯子
 ```html
 <div id="parent">
